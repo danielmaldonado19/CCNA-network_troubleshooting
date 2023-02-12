@@ -1,4 +1,6 @@
 12/02: first settings.
+12/03: understanding the connection between pc and switch for obtaining
+switch ip address.
 
 
 
@@ -28,3 +30,28 @@ I notice the IPV4 address is: 111.111.111.111. I suspect i have to change it.
 .4.Click over the pc of the right. CLick in IP´configuration.
 I notice the IPV4 address is: 222.222.222.222. I suspect i have to change it.
 .5.#ACCESS THE SWITCH AND ANALIZE SAME FEATURE, FOR NOW.
+
+
+
+-how I ahould connect pc witch switch for obtain switch ip address in cisco packet tracer
+
+To connect a PC to a switch in Cisco Packet Tracer and obtain the switch IP address, 
+
+Launch Cisco Packet Tracer and create a new simulation.
+Add a PC and a switch to the simulation by clicking on the "Add a device" icon and selecting
+the appropriate devices from the list.
+Connect the PC and the switch using a straight-through cable by clicking on the "Connect" icon
+and connecting the two devices.
+Configure the IP address on the PC. To do this, right-click on the PC and select "Configure."
+In the "PC Configuration" window, navigate to the "PC Network Configuration" section, select 
+"Ethernet" and enter an IP address, subnet mask, and default gateway for the PC.
+Configure the IP address on the switch. To do this, right-click on the switch and select
+"Configure." In the "Switch Configuration" window, navigate to the "Interface Configuration"
+section, select the "VLAN 1" interface and enter an IP address, subnet mask, and default
+gateway for the switch.
+Save the simulation and test the connectivity between the PC and the switch by pinging the
+switch IP address from the PC. To do this, right-click on the PC and select "Command Prompt." 
+Type "ping" followed by the IP address of the switch and press enter. If the ping is successful,
+you will receive reply messages indicating that the PC is able to communicate with the switch.
+By following these steps, you should be able to connect a PC to a switch in Cisco Packet Tracer
+ and obtain the switch IP address.
