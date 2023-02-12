@@ -1,1 +1,30 @@
 12/02: first settings.
+
+
+
+12/02.2: Understanding the excercise:
+
+-The network was configured before us.
+-It seems the network has problems with connection.
+-It seems ip addresses are wrongly formatted. They should have the IP address that
+appear under each device.
+-What I have to do is to enter each device and corroborates that each IP address is
+the same than the number given below.
+-Once finished, to make a ping to each other devices (this means 2 pings).
+-According to teacher, subnet mask should be always the same: 255.255.255.0 (for 3
+devices).
+-If we hover the mouse, then we'll get that info easily. Thats not the idea. The idea
+is to access to the switch from a pc.
+
+
+
+#CONFIGURING PC IP
+
+
+.1.Connect a pc with a switch with a console cable.
+.2.IP address PC1: 192.168.0.2. Standar subnet mask.
+.3.Click over pc of the left. Click in desktop. CLick in IP´configuration.
+I notice the IPV4 address is: 111.111.111.111. I suspect i have to change it.
+.4.Click over the pc of the right. CLick in IP´configuration.
+I notice the IPV4 address is: 222.222.222.222. I suspect i have to change it.
+.5.#ACCESS THE SWITCH AND ANALIZE SAME FEATURE, FOR NOW.
