@@ -26,28 +26,33 @@ Data packets layer that works MAC addresses of the devices of the LAN.
 
 
 
--how I ahould connect pc witch switch for obtain switch ip address in cisco packet tracer
+-how I ahould connect pc witch switch for obtain switch ip address in cisco packet
+tracer
 
 To connect a PC to a switch in Cisco Packet Tracer and obtain the switch IP address, 
 
 Launch Cisco Packet Tracer and create a new simulation.
-Add a PC and a switch to the simulation by clicking on the "Add a device" icon and selecting
-the appropriate devices from the list.
-Connect the PC and the switch using a straight-through cable by clicking on the "Connect" icon
-and connecting the two devices.
-Configure the IP address on the PC. To do this, right-click on the PC and select "Configure."
-In the "PC Configuration" window, navigate to the "PC Network Configuration" section, select 
-"Ethernet" and enter an IP address, subnet mask, and default gateway for the PC.
-Configure the IP address on the switch. To do this, right-click on the switch and select
-"Configure." In the "Switch Configuration" window, navigate to the "Interface Configuration"
-section, select the "VLAN 1" interface and enter an IP address, subnet mask, and default
-gateway for the switch.
-Save the simulation and test the connectivity between the PC and the switch by pinging the
-switch IP address from the PC. To do this, right-click on the PC and select "Command Prompt." 
-Type "ping" followed by the IP address of the switch and press enter. If the ping is successful,
-you will receive reply messages indicating that the PC is able to communicate with the switch.
-By following these steps, you should be able to connect a PC to a switch in Cisco Packet Tracer
- and obtain the switch IP address.
+Add a PC and a switch to the simulation by clicking on the "Add a device" icon and
+selecting the appropriate devices from the list.
+Connect the PC and the switch using a straight-through cable by clicking on the
+"Connect" icon and connecting the two devices.
+Configure the IP address on the PC. To do this, right-click on the PC and select
+"Configure." In the "PC Configuration" window, navigate to the "PC Network
+Configuration" section, select "Ethernet" and enter an IP address, subnet mask, and
+default gateway for the PC.
+Configure the IP address on the switch. To do this, right-click on the switch and
+select "Configure." In the "Switch Configuration" window, navigate to the "Interface 
+Configuration" section, select the "VLAN 1" interface and enter an IP address, subnet
+mask,and default gateway for the switch.
+
+Save the simulation and test the connectivity between the PC and the switch by
+pinging the switch IP address from the PC. To do this, right-click on the PC and
+select "Command Prompt." 
+Type "ping" followed by the IP address of the switch and press enter. If the ping
+is successful, you will receive reply messages indicating that the PC is able to
+communicate with the switch.
+By following these steps, you should be able to connect a PC to a switch in Cisco 
+Packet Tracer and obtain the switch IP address.
 
 
 
@@ -61,6 +66,32 @@ I notice the IPV4 address is: 169.254.103.52 (IN DHCP). I suspect i have to chan
 I notice the IPV4 address is: 169.254.190.199 (IN DHCP). I suspect i have to change it.
 .5.#ACCESS THE SWITCH AND ANALIZE SAME FEATURE, FOR NOW.
 .6.Tried to ping a pc from another one. Was succesful in DHCP mode.
+.7.When we set the static mode, then the IP addresses are like: 111.111... &
+222.222.222...
+
+
+#Conclusion1:
+-Both pcs are working wrong. The IP address of each one has to be modified to the
+given uder each pc.
+-Try to access to the switch from a pc for checking out its configuration.
 
 
 
+-whats a fastethernet0 connection between pc and switch in cisco packet tracer?
+
+Fa0 is a type of interface of switches and routers. It mainly depends on the 
+networks speed.
+
+There are tpes of inerfaces:
+
+GigabitEthernet(GigE): up to 1 Gbps speed.
+Ethernet: up to 10 Mbps speed.
+Wireless
+
+
+
+whats a fastethernet0 connection between pc and switch in cisco packet tracer?
+
+.A console cable is the proper one. This cable allows communication to the serial
+port of the pc. The pc serial are the COM ports.
+.This cable allows the access to the switch CLI.
