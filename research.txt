@@ -1,0 +1,124 @@
+12/02: first settings.
+12/02: understanding the connection between pc and switch for obtaining
+switch ip address.
+
+
+
+12/02.2: Understanding the excercise:
+
+-The network was configured before us.
+-It seems the network has problems with connection.
+-It seems ip addresses are wrongly formatted. They should have the IP address that
+appear under each device.
+-What I have to do is to enter each device and corroborates that each IP address is
+the same than the number given below.
+-Once finished, to make a ping to each other devices (this means 2 pings).
+-According to teacher, subnet mask should be always the same: 255.255.255.0 (for the 3
+devices).
+-If we hover the mouse, then we'll get that info easily. Thats not the idea. The idea
+is to access to the switch from a pc.
+
+
+
+-Whats interface FastEthernet0?
+
+Data packets layer that works MAC addresses of the devices of the LAN.
+
+
+
+#ANALISIS OF PCs IP
+
+.1.Connect a pc with a switch with a console cable.
+.2.IP address PC1: 192.168.0.2. Standar subnet mask.
+.3.Click over pc of the left. Click in desktop. CLick in IP´configuration.
+I notice the IPV4 address is: 169.254.103.52 (IN DHCP). I suspect i have to change it.
+.4.Click over the pc of the right. CLick in IP´configuration.
+I notice the IPV4 address is: 169.254.190.199 (IN DHCP). I suspect i have to change it.
+.5.#ACCESS THE SWITCH AND ANALIZE SAME FEATURE, FOR NOW.
+.6.Tried to ping a pc from another one. Was succesful in DHCP protocol.
+.7.When we set the static mode, then the IP addresses are like: 111.111... &
+222.222.222...
+
+
+#Conclusion1:
+-Both pcs are working wrong. The IP address of each one has to be modified to the
+given uder each pc.
+-Try to access to the switch from a pc for checking out its configuration.
+
+
+
+-whats a fastethernet0 connection between pc and switch in cisco packet tracer?
+
+Fa0 is a type of interface of switches and routers. It mainly depends on the 
+networks speed.
+
+There are some types of inerfaces:
+
+GigabitEthernet(GigE): up to 1 Gbps speed.
+Ethernet: up to 10 Mbps speed.
+Wireless
+
+
+
+-how is a fastethernet0 connection between pc and switch in cisco packet tracer?
+
+.A console cable is the proper one. This cable allows communication to the serial
+port of the pc. The pc serial are the COM ports.
+.This cable allows the access to the switch CLI.
+
+
+
+@15/02.1:
+
+#STATIC & DHCP IN SWITCH
+https://www.cisco.com/c/en/us/support/docs/smb/switches/cisco-350-series-managed-switches/smb5557-configure-the-internet-protocol-ip-address-settings-on-a-swi.html
+
+.A switch can have multiple IP Addreses.
+.Each IP address can be assigned to each port, interface, VLAN, or Link Aggregation
+Groups (LAGs)
+
+.A switch IP Address can be manually configured or automatically by DHCP server.
+If there's no DHCP server available, then switch will use factory default IP address
+which normally is: 192.168.1.254
+
+
+
+@16/02.1:
+
+#CONFIGURE STATIC IP ADDRESS
+
+The swtich is set up without DHCP server.
+
+.1.Open the switch.-enable.-configure t.
+.2.-switch(config)#interface [interface-id | vlan-id
+-Switch(config)#interface vlan 1 #Allows to configure vlan1 for IP config.
+NOTE: the VLAN interface has to already exists in the switch.
+
+#VLAN (Virtual Local Area Network)
+
+.Are separate virtual networks for grouping the devices connected to the switch.
+.Design department and accounts department doesnt have to share data. So we create
+a VLAN for design, and another one VLAN for accounts.
+.As a virtual network, it doesnt matter the physical location of the decives inside
+the LAN.
+
+
+
+.3.-Switch(config-if)# ip address 192.168.1.1 255.255.255.0
+Now the VLAN interfface has a IP address and subnet mask.
+
+.4.-Switch(config-if)#no shutdown
+Eanbles the data traffic in the interface. Even when we configure the IP address, its
+still in a "down" state. So by doing this, we up the interface.
+
+.5.-Switch(config-if)#end 
+Goes back to privileged mode.
+
+.6.-Switch#show ip interface 
+It shows the configuration of the ports.
+
+.7.-switch# copy running-config startup-config
+It saves the changes made on the device in non-volatile memory.
+
+.8.switch# show running-config
+It displays the configuration. Including changes I made.
